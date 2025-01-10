@@ -13,9 +13,9 @@ COURSES = {
             "video": "",
             "text": "Это текст для урока 1 модуля 1.",
             "file": "",
-            "image": "files\Group 15.jpg",
+            "image": "/root/github/am_bot/files/Group 15.jpg",
             "quiz": [
-                {"question": "ответ Париж", "options": ["Берлин", "Париж", "Рим", "Мадрид"], "answer": "Париж"},
+                {"question": "Ответ Париж", "options": ["Берлин", "Париж", "Рим", "Мадрид"], "answer": "Париж"},
                 {"question": "Сколько будет 2 + 2?", "options": ["3", "4", "5", "6"], "answer": "4"},
             ]
         },
@@ -23,7 +23,7 @@ COURSES = {
             "video": "",
             "text": "Это текст для урока 2 модуля 1.",
             "file": "",
-            "image": "files\Group 15.jpg",
+            "image": "/root/github/am_bot/Group 15.jpg",
             "quiz": [
                 {"question": "Какой химический символ у воды?", "options": ["H2O", "O2", "CO2", "HO"], "answer": "H2O"},
             ]
@@ -34,7 +34,7 @@ COURSES = {
             "video": "",
             "text": "Это текст для урока 1 модуля 2.",
             "file": "",
-            "image": "files\Group 15.jpg",
+            "image": "/root/github/am_bot/Group 15.jpg",
             "quiz": [
                 {"question": "Какая планета известна как Красная планета?", "options": ["Земля", "Марс", "Юпитер", "Венера"], "answer": "Марс"},
             ]
