@@ -1,3 +1,5 @@
+from config import CODE, TOKEN
+from modules import COURSES
 import json
 import logging
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
@@ -6,44 +8,8 @@ from telegram.ext import Application, CommandHandler, CallbackQueryHandler, Mess
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 
-# Define the course structure
-COURSES = {
-    "Модуль 1": {
-        "Урок 1": {
-            "video": "",
-            "text": "Это текст для урока 1 модуля 1.",
-            "file": "",
-            "image": "./files/Group 15.jpg",
-            "quiz": [
-                {"question": "Ответ Париж", "options": ["Берлин", "Париж", "Рим", "Мадрид"], "answer": "Париж"},
-                {"question": "Сколько будет 2 + 2?", "options": ["3", "4", "5", "6"], "answer": "4"},
-            ]
-        },
-        "Урок 2": {
-            "video": "",
-            "text": "Это текст для урока 2 модуля 1.",
-            "file": "",
-            "image": "./files/Group 15.jpg",
-            "quiz": [
-                {"question": "Какой химический символ у воды?", "options": ["H2O", "O2", "CO2", "HO"], "answer": "H2O"},
-            ]
-        },
-    },
-    "Модуль 2": {
-        "Урок 1": {
-            "video": "",
-            "text": "Это текст для урока 1 модуля 2.",
-            "file": "",
-            "image": "./files/Group 15.jpg",
-            "quiz": [
-                {"question": "Какая планета известна как Красная планета?", "options": ["Земля", "Марс", "Юпитер", "Венера"], "answer": "Марс"},
-            ]
-        },
-    },
-}
-
 # Define the access code
-ACCESS_CODE = "AAEm2Ynen2L0DCNbLGZ9xzT_7k9sfZXcwc4"
+ACCESS_CODE = CODE
 
 # Store authorized users
 AUTHORIZED_USERS = set()
@@ -279,7 +245,7 @@ async def show_progress(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def main():
     """Запустить бота."""
-    application = Application.builder().token("7717768554:AAEm2Ynen2L0DCNbLGZ9xzT_7k9sfZXcwc4").build()
+    application = Application.builder().token(TOKEN).build()
 
     application.add_handler(CommandHandler("start", start))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, check_access_code))
